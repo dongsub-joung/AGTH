@@ -1,8 +1,10 @@
 mod listup_exe;
 mod inputing;
 
+use eframe::egui;
+
 // @todo system procedure
-fn main() {
+fn main() -> eframe::Result {
     // 1. list runtimed .exe programs up as CLI 
     listup_exe::init_listup();
 
@@ -16,7 +18,7 @@ fn main() {
     
     // 3-b. a program dll runtime(windows System Procedures call while runtime)
     // https://drmemory.org/page_drstrace.html
-    // let data_stream_bus= runtime
+    // let data_stream_bus= runtime 
 
     // 4. print some data(some seleting data) with GUI
 
@@ -24,6 +26,43 @@ fn main() {
     // https://github.com/emilk/egui
     // let app;
     // app.bulild()
+
+    let options = eframe::NativeOptions {
+        viewport: egui::ViewportBuilder::default().with_inner_size([320.0, 240.0]),
+        ..Default::default()
+    };
+    eframe::run_native(
+        "My egui App",
+        options,
+        Box::new(|_cc| {
+            Ok(Box::<MyApp>::default())
+        }),
+    )
 }
 
+struct MyApp {
+    runtime_channel: String,
+    body_text: String,
+}
+
+impl Default for MyApp {
+    fn default() -> Self {
+        Self {
+            runtime_channel: "【Collab】Ronald McDonald Insanity 2023【15th Anniversary】".to_owned(),
+            body_text: "王　政　復　古　の　大　号　令".to_owned(),
+        }
+    }
+}
+
+// https://doc.rust-lang.org/reference/runtime.html
+// https://users.rust-lang.org/t/using-format-strings-at-runtime-rust-stable/105259
+impl eframe::App for MyApp {
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
+        egui::CentralPanel::default().show(ctx, |ui: &mut egui::Ui| {
+            ui.heading("My egui Application\n");
+            ui.label(format!("runtime_channel: {}\n", self.runtime_channel));
+            ui.heading(&self.body_text);
+        });
+    }
+}
 
