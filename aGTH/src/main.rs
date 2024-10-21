@@ -1,11 +1,15 @@
+mod listup_exe;
+mod inputing;
+
+// @todo system procedure
 fn main() {
-
-    // @todo system procedure
-
     // 1. list runtimed .exe programs up as CLI 
-    // https://docs.rs/tasklist/latest/tasklist/#:~:text=Get%20all%20process%20pid%20%2C%20process,%2Ccpn%2Cdes)%20%7D%20%7D
+    listup_exe::init_listup();
 
-    // 2. select it 
+    // 2. select it (more show details up )
+    // https://docs.rs/procfs/latest/procfs/process/index.html#:~:text=If%20you%20have%20a%20process,running%20processes%20using%20all_processes()%20.
+    let input_string= inputing::init_inputing();
+    listup_exe::init_selecting(input_string);
 
     // 3. .exe -> memory
     // https://www.codeproject.com/Articles/13323/Intercepting-WinAPI-calls
