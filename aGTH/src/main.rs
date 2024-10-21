@@ -13,15 +13,14 @@ fn main() {
 
     // 3. .exe -> memory
     // https://www.codeproject.com/Articles/13323/Intercepting-WinAPI-calls
-
+    
     // 3-b. a program dll runtime(windows System Procedures call while runtime)
     // https://drmemory.org/page_drstrace.html
+    // let data_stream_bus= runtime
 
-    // 4. decoding UTF-8
-    
-    // 5. print some data(some seleting data) with GUI
+    // 4. print some data(some seleting data) with GUI
 
-    // 5-b. the lastest: runtime
+    // 5. the lastest: runtime
     // https://github.com/emilk/egui
     // let app;
     // app.bulild()
