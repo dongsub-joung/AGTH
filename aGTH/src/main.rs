@@ -1,18 +1,26 @@
 fn main() {
 
     // @todo system procedure
-    // .exe -> memory
+
+    // 1. list runtimed .exe programs up as CLI 
+    // https://docs.rs/tasklist/latest/tasklist/#:~:text=Get%20all%20process%20pid%20%2C%20process,%2Ccpn%2Cdes)%20%7D%20%7D
+
+    // 2. select it 
+
+    // 3. .exe -> memory
     // https://www.codeproject.com/Articles/13323/Intercepting-WinAPI-calls
 
-    // a program dll runtime(windows System Procedures call while runtime)
+    // 3-b. a program dll runtime(windows System Procedures call while runtime)
     // https://drmemory.org/page_drstrace.html
 
-    // decoding UTF-8
+    // 4. decoding UTF-8
     
-    // print with GUI
+    // 5. print some data(some seleting data) with GUI
 
-    // the lastest: runtime
+    // 5-b. the lastest: runtime
     // https://github.com/emilk/egui
     // let app;
     // app.bulild()
 }
+
+
