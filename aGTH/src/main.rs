@@ -13,9 +13,11 @@ fn main() -> eframe::Result {
     let input_string= inputing::init_inputing();
     listup_exe::init_selecting(input_string);
 
-    // 3. .exe -> memory
+
+    // 3-a. https://stackoverflow.com/questions/29461693/how-can-i-get-cargo-to-recompile-changed-files-automatically
+    // generate auto .wasm
+    // 3. set path as deno(node js runtime).exe -> memory
     // https://www.codeproject.com/Articles/13323/Intercepting-WinAPI-calls
-    
     // 3-b. a program dll runtime(windows System Procedures call while runtime)
     // https://drmemory.org/page_drstrace.html
     // let data_stream_bus= runtime 
