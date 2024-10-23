@@ -1,7 +1,6 @@
 mod listup_exe;
 mod inputing;
-
-use eframe::egui;
+mod hooking;
 
 // @todo system procedure
 fn main() -> eframe::Result {
@@ -13,12 +12,12 @@ fn main() -> eframe::Result {
     listup_exe::init_selecting(input_string);
 
     // 3-a. (Windows) cargo install watchexec-cli -> watchexec -r cargo run
-    // 3.b. deno compile --reload ./main.ts (node js runtime) 
-    // .exe -> memory
-    // 3-b. a program dll runtime(windows System Procedures call while runtime)
-    // https://drmemory.org/page_drstrace.html
-    // let data_stream_bus= runtime 
-    
+    // 3-b. deno compile --reload ./main.ts (node js runtime) 
+    // 3-c. (chat gpt) a program dll runtime(windows System Procedures call while runtime) exe -> memory 
+    // Assuming you know the target address
+    let target_address = 0x12345678 as *mut u8; // Replace with the actual address
+    hooking::hook_function(target_address, my_hook);
+
     // 4. print some data(some seleting data) with GUI
     // node js http server -> print html (native web app)
 }
@@ -28,3 +27,4 @@ fn main() -> eframe::Result {
 // https://users.rust-lang.org/t/how-to-execute-any-string-as-source-code-in-runtime/55717/12
 // https://doc.rust-lang.org/reference/runtime.html
 // deno (https://www.telerik.com/blogs/how-to-compile-rust-into-webassembly-run-in-deno)
+// https://drmemory.org/page_drstrace.html

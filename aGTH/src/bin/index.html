@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .poem {
+            font-size: 1.2em;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The Road Not Taken</h1>
+    <div class="poem" id="poem">
+        Two roads diverged in a yellow wood,<br>
+        And sorry I could not travel both<br>
+        And be one traveler, long I stood<br>
+        And looked down one as far as I could<br>
+        To where it bent in the undergrowth;<br><br>
+
+        Then took the other, as just as fair,<br>
+        And having perhaps the better claim,<br>
+        Because it was grassy and wanted wear;<br>
+        Though as for that the passing there<br>
+        Had worn them really about the same,<br><br>
+
+        And both that morning equally lay<br>
+        In leaves no step had trodden black.<br>
+        Oh, I kept the first for another day!<br>
+        Yet knowing how way leads on to way,<br>
+        I doubted if I should ever come back.<br><br>
+
+        I shall be telling this with a sigh<br>
+        Somewhere ages and ages hence:<br>
+        Two roads diverged in a wood, and I—<br>
+        I took the one less traveled by,<br>
+        And that has made all the difference.
+    </div>
+
+    <button class="button" onclick="changeColor()">Change Text Color</button>
+
+    <script>
+        function changeColor() {
+            const poemElement = document.getElementById('poem');
+            poemElement.style.color = poemElement.style.color === 'blue' ? '#333' : 'blue';
+        }
+    </script>
+
+</body>
+</html>
