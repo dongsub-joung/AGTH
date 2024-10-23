@@ -9,13 +9,11 @@ fn main() -> eframe::Result {
     listup_exe::init_listup();
 
     // 2. select it (more show details up )
-    // https://docs.rs/procfs/latest/procfs/process/index.html#:~:text=If%20you%20have%20a%20process,running%20processes%20using%20all_processes()%20.
-    let input_string= inputing::init_inputing();
+    let input_string= inputing::init_inputing();    
     listup_exe::init_selecting(input_string);
 
+    // 3-a. (Windows) cargo install watchexec-cli -> watchexec -r cargo run
 
-    // 3-a. https://stackoverflow.com/questions/29461693/how-can-i-get-cargo-to-recompile-changed-files-automatically
-    // generate auto .wasm
     // 3. set path as deno(node js runtime).exe -> memory
     // https://www.codeproject.com/Articles/13323/Intercepting-WinAPI-calls
     // 3-b. a program dll runtime(windows System Procedures call while runtime)
