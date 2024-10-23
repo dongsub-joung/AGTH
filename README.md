@@ -5,6 +5,10 @@ dll Hookable rust windows app
 
 https://ko.wikipedia.org/wiki/AGTH
 
-## ref from South Korea hantai
+## ref from South Korea hentai
 - https://blupine.tistory.com/39
 - https://arallab.hided.net/board_lecture/2159
+
+
+## ref from Akiba Japana hentai  
+- https://learn.microsoft.com/ja-jp/troubleshoot/windows-client/performance/generate-a-kernel-or-complete-crash-dump
