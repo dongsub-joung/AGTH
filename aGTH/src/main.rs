@@ -55,7 +55,8 @@ impl Default for MyApp {
 }
 
 // https://doc.rust-lang.org/reference/runtime.html
-// https://users.rust-lang.org/t/using-format-strings-at-runtime-rust-stable/105259
+// https://users.rust-lang.org/t/how-to-execute-any-string-as-source-code-in-runtime/55717/12
+// deno (https://www.telerik.com/blogs/how-to-compile-rust-into-webassembly-run-in-deno)
 impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui: &mut egui::Ui| {
