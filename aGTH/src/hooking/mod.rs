@@ -21,6 +21,8 @@ pub fn hook_function(target_address: *mut u8, hook_function: fn()) {
 }
 
 // Your hook function
-pub fn my_hook() {
+pub fn my_hook() -> Box<String> {
     println!("Hooked!");
+    
+    Box::from("String".to_string())
 }
