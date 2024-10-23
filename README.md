@@ -10,5 +10,5 @@ https://ko.wikipedia.org/wiki/AGTH
 - https://arallab.hided.net/board_lecture/2159
 
 
-## ref from Akiba Japana hentai  
+## ref from Akiba Japan hentai  
 - https://learn.microsoft.com/ja-jp/troubleshoot/windows-client/performance/generate-a-kernel-or-complete-crash-dump
